@@ -14,6 +14,7 @@ class AppText extends StatelessWidget {
   final TextWidthBasis? textWidthBasis;
   final TextHeightBehavior? textHeightBehavior;
   final Locale? locale;
+  final VoidCallback? onTap;
 
   final Color? color;
   final double? fontSize;
@@ -64,7 +65,7 @@ class AppText extends StatelessWidget {
         this.foreground,
         this.background,
         this.textLocale,
-        this.shadows,
+        this.shadows, this.onTap,
       });
 
   @override
@@ -89,19 +90,22 @@ class AppText extends StatelessWidget {
       shadows: shadows,
     );
 
-    return Text(
-      data,
-      style: textStyle,
-      textAlign: textAlign,
-      textDirection: textDirection,
-      softWrap: softWrap,
-      overflow: overflow,
-      textScaleFactor: textScaleFactor,
-      maxLines: maxLines,
-      semanticsLabel: semanticsLabel,
-      textWidthBasis: textWidthBasis,
-      textHeightBehavior: textHeightBehavior,
-      locale: locale,
+    return GestureDetector(
+      onTap: onTap ,
+      child: Text(
+        data,
+        style: textStyle,
+        textAlign: textAlign,
+        textDirection: textDirection,
+        softWrap: softWrap,
+        overflow: overflow,
+        textScaleFactor: textScaleFactor,
+        maxLines: maxLines,
+        semanticsLabel: semanticsLabel,
+        textWidthBasis: textWidthBasis,
+        textHeightBehavior: textHeightBehavior,
+        locale: locale,
+      ),
     );
   }
 }

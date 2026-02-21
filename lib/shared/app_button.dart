@@ -4,8 +4,8 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import '../core/theme/app_colors.dart';
 import 'app_text.dart';
 
-class ButtonWithLoading extends StatelessWidget {
-  const ButtonWithLoading({
+class AppButton extends StatelessWidget {
+  const AppButton({
     super.key,
     required this.onTap,
     required this.title,

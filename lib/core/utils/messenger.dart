@@ -5,7 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
-class Message {
+class Messenger {
   static void toastMessage(String message) {
     Fluttertoast.showToast(msg: message);
   }

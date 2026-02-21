@@ -38,7 +38,11 @@ dependencies:
   logger:
   top_snackbar_flutter:
   fluttertoast:
+  http:
   loading_animation_widget:
+  get_storage:
+  pinput:
+
 
 
 dev_dependencies:
